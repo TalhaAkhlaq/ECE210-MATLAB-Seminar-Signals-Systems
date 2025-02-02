@@ -1,6 +1,6 @@
-# MATLAB-Seminar-Signals-Systems
+# MATLAB-Seminar: Signals & Systems
 
-This repository contains assignments from the MATLAB Sensors course (ECE 2120) from Spring 2026.
+This repository contains assignments from ECE210-A  (**Spring 2025**).
 
 ---
 
@@ -8,13 +8,12 @@ This repository contains assignments from the MATLAB Sensors course (ECE 2120) f
 
 The course addresses:
 
-- **Sensor Fundamentals:** Understanding various types of sensors and their applications.
-- **Signal Processing:** Filtering, smoothing, and analyzing sensor data.
-- **Data Acquisition:** Interfacing sensors with MATLAB for real-time data collection.
-- **MATLAB Programming:** Writing scripts and functions for sensor data analysis.
-- **Visualization:** Plotting and interpreting sensor data using MATLAB.
-- **Error Analysis:** Evaluating sensor accuracy and uncertainty.
-- **Machine Learning for Sensors:** Applying AI techniques for sensor data classification and prediction.
+- **MATLAB Fundamentals:** Introduction to MATLAB and its interface.
+- **Programming in MATLAB:** Writing scripts, functions, and working with built-in functions.
+- **Data Visualization:** Plotting and graphing techniques in MATLAB.
+- **Mathematical Computation:** Using MATLAB for numerical methods, matrix operations, and solving equations.
+- **Simulation and Modeling:** Implementing models and running simulations.
+- **Debugging and Optimization:** Understanding error handling and performance improvements.
 
 ---
 
@@ -22,7 +21,7 @@ The course addresses:
 
 1. **Download MATLAB**: Visit [MathWorks official website](https://www.mathworks.com/) and download the latest version.
 2. **Install MATLAB**: Follow the installation guide provided by MathWorks.
-3. **Run MATLAB**: Open MATLAB and start working with sensor-related data.
+3. **Run MATLAB**: Open MATLAB and start working on assignments and projects.
 
 ---
 
