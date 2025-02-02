@@ -13,21 +13,17 @@ The course addresses:
 - **Simulation and Modeling:** Implementing models and running simulations.
 - **Debugging and Optimization:** Understanding error handling and performance improvements.
 
----
-
 ## Setting Up MATLAB
 
 1. **Download MATLAB**: Visit [MathWorks official website](https://www.mathworks.com/) and download the latest version.
 2. **Install MATLAB**: Follow the installation guide provided by MathWorks.
 3. **Run MATLAB**: Open MATLAB and start working on assignments and projects.
 
----
 
 ## Assignments
 
 - **Assignment 1**: *(Link will be added later)*
 
----
 
 ## Copyright & Licensing
 
