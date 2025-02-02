@@ -2,8 +2,6 @@
 
 This repository contains assignments from ECE210-A  (**Spring 2025**).
 
----
-
 ## Course Overview
 
 The course addresses:
