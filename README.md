@@ -22,8 +22,7 @@ The course addresses:
 
 ## Assignments
 
-- **Assignment 1**: 
-
+- **[Assignment 1](https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/tree/main/Assignment%201)**
 
 ## Copyright & Licensing
 
