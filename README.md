@@ -7,7 +7,7 @@ This repository contains assignments from ECE210-A  (**Spring 2025**).
 The course addresses:
 
 - **MATLAB Fundamentals:** Introduction to MATLAB and its interface.
-- **Programming in MATLAB:** Writing scripts, functions, and working with built-in functions.
+- **Programming in MATLAB:** Writing scripts and working with built-in functions.
 - **Data Visualization:** Plotting and graphing techniques in MATLAB.
 - **Mathematical Computation:** Using MATLAB for numerical methods, matrix operations, and solving equations.
 - **Simulation and Modeling:** Implementing models and running simulations.
@@ -22,7 +22,7 @@ The course addresses:
 
 ## Assignments
 
-- **Assignment 1**: *(Link will be added later)*
+- **Assignment 1**: 
 
 
 ## Copyright & Licensing
