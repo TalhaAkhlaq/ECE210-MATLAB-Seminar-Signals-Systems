@@ -5,6 +5,5 @@
 
 ## 💻 Solution  
 ```matlab
-% Short preview of your MATLAB solution
-disp('Hello, this is my MATLAB solution for Assignment 1!');
+% 
 
