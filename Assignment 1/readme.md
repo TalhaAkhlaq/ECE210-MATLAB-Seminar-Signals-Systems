@@ -1,9 +1,9 @@
 # Assignment 1  
 
-## Questions
-<embed src="Assignment 1.pdf" type="application/pdf" width="100%" height="600px" />
+## 📄 Questions  
+[📄 View Assignment 1 Questions](Assignment%201.pdf)  
+*(Click the link to view the PDF directly on GitHub.)*
 
-## Solution  
+## 💻 Solution  
 ```matlab
-% 
-
+% ;
