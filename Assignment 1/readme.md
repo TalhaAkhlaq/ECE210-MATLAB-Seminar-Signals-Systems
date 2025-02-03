@@ -3,6 +3,8 @@
 
 ## Assignment 1 Solutions
 ```matlab
+% Assignment 1 (Talha Akhlaq) (2/3/2025) (ECE210-A) (Prof. Darius)
+
 % Question 1.1:
 
 u = [17,30,8]
