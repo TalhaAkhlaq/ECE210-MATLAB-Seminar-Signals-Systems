@@ -1,9 +1,7 @@
-# Assignment 1 Solution
-
-## Assignment Questions
+## Assignment 1 Questions
 [Assignment 1 Questions](https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/blob/main/Assignment%201/Assignment%201.pdf)
 
-## Question 1.1
+## Assignment 1 Solutions
 ```matlab
 % Question 1.1:
 
