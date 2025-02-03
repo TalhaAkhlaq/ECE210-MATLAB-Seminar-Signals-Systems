@@ -1,6 +1,6 @@
 # MATLAB-Seminar: Signals & Systems
 
-This repository contains assignments from ECE210-A  (**Spring 2025**).
+This repository contains assignments from ECE210-A (**Spring 2025**). It covers fundamental programming concepts, data visualization, numerical methods, and simulations to enhance problem-solving skills in an academic and practical setting.
 
 ## Course Overview
 
