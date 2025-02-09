@@ -22,7 +22,8 @@ The course addresses:
 
 ## Assignments
 
-- **[Assignment 1: Welcome to MATLAB](https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/tree/main/Assignment%201)**
+- **[Assignment 1: MATLAB Basics](https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/tree/main/Assignment%201)**
+- **[Assignment 2: Vectorization](https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/tree/main/Assignment%201)**
 
 ## Copyright & Licensing
 
