@@ -1,7 +1,7 @@
 # Assignment 1: MATLAB Basics
 
 ## Questions
-[Assignment 1 Questions]([https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/blob/main/Assignment%201/Assignment%201%3A%20MATLAB%20Basics/Assignment%201%20MATLAB%20Basics.pdf)]
+[Assignment 1 Questions](https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/blob/main/Assignment%201%3A%20MATLAB%20Basics/Assignment%201%20MATLAB%20Basics.pdf)
 ## Solution
 ```matlab
 % Assignment 1: MATLAB Basics (Talha Akhlaq) (2/3/2025) (ECE210-A) (Prof. Darius)
