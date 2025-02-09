@@ -3,7 +3,7 @@
 
 ## Assignment 1 Solutions
 ```matlab
-% Assignment 1 (Talha Akhlaq) (2/3/2025) (ECE210-A) (Prof. Darius)
+% Assignment 1: MATLAB Basics (Talha Akhlaq) (2/3/2025) (ECE210-A) (Prof. Darius)
 
 % Question 1.1:
 
