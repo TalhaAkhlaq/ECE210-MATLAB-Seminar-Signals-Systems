@@ -1,7 +1,7 @@
 # Assignment 3: Ones and Zeros
 
 ## Questions
-[Questions](https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/blob/main/Assignment%202%3A%20Vectorization/Assignment%202%20Vectorization.pdf)
+[Questions](https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/blob/main/Assignment%203%3A%20Ones%20and%20Zeros/Assignment3.pdf)
 
 ## Solution
 ```matlab
