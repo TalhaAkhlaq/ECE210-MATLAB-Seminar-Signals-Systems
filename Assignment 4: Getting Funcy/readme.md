@@ -5,29 +5,57 @@
 
 ## Solution
 ```matlab
-% Assignment 3 (Talha Akhlaq) (2/24/2025) (ECE210-A) (Prof. Darius)
+% Assignment 4 (Talha Akhlaq) (3/11/2025) (ECE210-A) (Prof. Darius)
 
 % Question 1:
-x = linspace(-pi/2, pi/2, 1e4);
-u = abs(tan(x));
-v = u(u > 0 & u <= 10);
-gm = exp(mean(log(v)));
-disp(['Geometric Mean: ', num2str(gm)]);
+dotproduct = @(x, y) x' * y; 
 
 % Question 2:
-[A, B] = meshgrid(1:256, 1:256);
-L = (abs(A - 100) + abs(B - 100) < 40) & (sqrt((A - 100).^2 + (B - 100).^2) > 15);
-figure;
-imshow(L);
-title('Matrix L');
+function [orthonormal] = is_orthonormal(X)
+    dotproduct = @(x, y) x' * y; 
+        for i = 1:size(X, 2)
+        if abs(norm(X(:, i)) - 1) > 1000 * eps
+            orthonormal = false;
+            return;
+        end
+        end
+    for i = 1:size(X, 2)
+        for j = i+1:size(X, 2)
+            if abs(dotproduct(X(:, i), X(:, j))) > 1000 * eps
+                orthonormal = false;
+                return;
+            end
+        end
+    end
+    orthonormal = true;
+end
 
 % Question 3:
-dice = 1:6;
-[d1, d2, d3] = ndgrid(dice, dice, dice);
-s = d1 + d2 + d3;
-valid_count = sum(s(:) >= 11);
-total = numel(s);
-p = valid_count / total;
-disp(['Probability of sum >= 11: ', num2str(p)]);
+function [Y] = gram_schmidt(X)
+    dotproduct = @(x, y) x' * y;     
+    if is_orthonormal(X)
+        Y = X;
+        return;
+    end    
+    Y = zeros(size(X)); 
+    for i = 1:size(X, 2)
+        column = X(:, i);        
+        for j = 1:i-1
+            projection = dotproduct(Y(:, j), column) * Y(:, j);
+            column = column - projection;
+        end        
+        Y(:, i) = column / norm(column);
+    end
+end
 
+% Question 4:
+M = randi(15, 4, 4) + 1j * randi(15, 4, 4);
+disp('Original Matrix M:');
+disp(M);
+N = gram_schmidt(M);
+disp('Orthonormalized Matrix N:');
+disp(N);
+result = is_orthonormal(N);
+disp('Output:');
+disp(result);
 
