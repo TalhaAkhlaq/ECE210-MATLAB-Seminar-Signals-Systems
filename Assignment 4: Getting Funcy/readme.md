@@ -8,43 +8,42 @@
 % Assignment 4 (Talha Akhlaq) (3/11/2025) (ECE210-A) (Prof. Darius)
 
 % Question 1:
-dotproduct = @(x, y) x' * y; 
+dotfunction = @(x, y) x' * y; 
 
 % Question 2:
-function [orthonormal] = is_orthonormal(X)
-    dotproduct = @(x, y) x' * y; 
-        for i = 1:size(X, 2)
-        if abs(norm(X(:, i)) - 1) > 1000 * eps
-            orthonormal = false;
+function [is_orthonormal] = is_orthonormal(A)
+    dotfunction = @(u, v) u' * v;
+    for col = 1:size(A, 2)
+        if abs(norm(A(:, col)) - 1) > 1000 * eps
+            is_orthonormal = false;
             return;
         end
-        end
-    for i = 1:size(X, 2)
-        for j = i+1:size(X, 2)
-            if abs(dotproduct(X(:, i), X(:, j))) > 1000 * eps
-                orthonormal = false;
+    end
+    for col = 1:size(A, 2)
+        for col2 = col+1:size(A, 2)
+            if abs(dotfunction(A(:, col), A(:, col2))) > 1000 * eps
+                is_orthonormal = false;
                 return;
             end
         end
     end
-    orthonormal = true;
+    is_orthonormal = true;
 end
 
 % Question 3:
-function [Y] = gram_schmidt(X)
-    dotproduct = @(x, y) x' * y;     
-    if is_orthonormal(X)
-        Y = X;
+function Q = gram_schmidt(B)
+    dotfunction = @(p, q) p' * q;
+    if is_orthonormal(B)
+        Q = B;
         return;
-    end    
-    Y = zeros(size(X)); 
-    for i = 1:size(X, 2)
-        column = X(:, i);        
+    end
+    Q = zeros(size(B));
+    for i = 1:size(B, 2)
+        v = B(:, i);
         for j = 1:i-1
-            projection = dotproduct(Y(:, j), column) * Y(:, j);
-            column = column - projection;
-        end        
-        Y(:, i) = column / norm(column);
+            v = v - dotfunction(Q(:, j), v) * Q(:, j);
+        end
+        Q(:, i) = v / norm(v);
     end
 end
 
@@ -58,4 +57,5 @@ disp(N);
 result = is_orthonormal(N);
 disp('Output:');
 disp(result);
+
 
