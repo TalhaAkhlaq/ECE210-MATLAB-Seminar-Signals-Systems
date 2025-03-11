@@ -1,7 +1,7 @@
 # Assignment 4: Getting Funcy
 
 ## Questions
-[Questions](https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/blob/main/Assignment%203%3A%20Ones%20and%20Zeros/Assignment3.pdf)
+[Questions](https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/blob/main/Assignment%204%3A%20Getting%20Funcy/Assignment4.pdf)
 
 ## Solution
 ```matlab
