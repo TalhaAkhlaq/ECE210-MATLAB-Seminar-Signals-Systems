@@ -8,7 +8,7 @@
 % Assignment 5 (Talha Akhlaq) (3/18/2025) (ECE210-A) (Prof. Darius)
 
 % Question 1
-x = linspace(-2*pi, 2*pi, 1000);
+x = linspace(-5, 5, 1000);
 cos_true = cos(x);
 orders = 2:2:20;
 num_orders = length(orders);
@@ -26,8 +26,8 @@ for k = 1:num_orders
     plot(x, taylor_approximations(k, :), '--', 'LineWidth', 1.5);
 end
 hold off;
-xlabel('x');
-ylabel('y');
+xlabel('x axis');
+ylabel('y axis');
 title('Cosine Function and Taylor Approximations');
 legend(['cos(x)', arrayfun(@(n) sprintf('%dth Order', n), orders, 'UniformOutput', false)], 'Location', 'Best');
 xlim([-5, 5]);
@@ -40,8 +40,8 @@ grid on;
 figure;
 subplot(1,2,1);
 plot(x, cos_true, 'LineWidth', 2);
-xlabel('x');
-ylabel('cos(x)');
+xlabel('x axis');
+ylabel('y axis');
 title('Original cos(x)');
 xlim([-5, 5]);
 ylim([-5, 5]);
@@ -55,8 +55,8 @@ for k = 1:num_orders
     plot(x, taylor_approximations(k, :), 'LineWidth', 1.5);
 end
 hold off;
-xlabel('x');
-ylabel('Approximation');
+xlabel('x axis');
+ylabel('y axis');
 title('Taylor Approximations');
 legend(arrayfun(@(n) sprintf('%dth Order', n), orders, 'UniformOutput', false), 'Location', 'Best');
 xlim([-5, 5]);
@@ -74,9 +74,9 @@ Z(R == 0) = 1;
 figure;
 surf(X, Y, Z);
 shading interp;
-xlabel('X');
-ylabel('Y');
-zlabel('sinc(R)');
+xlabel('x axis');
+ylabel('y axis');
+zlabel('z axis');
 title('Surface Plot of sinc Function');
 xlim([-5, 5]);
 ylim([-5, 5]);
@@ -89,4 +89,3 @@ function approx = compute_taylor_cos(x, order)
         approx = approx + ((-1)^(n/2)) * (x.^n) / factorial(n);
     end
 end
-
