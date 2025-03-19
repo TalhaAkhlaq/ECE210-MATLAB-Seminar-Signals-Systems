@@ -8,7 +8,7 @@
 % Assignment 5 (Talha Akhlaq) (3/18/2025) (ECE210-A) (Prof. Darius)
 
 % Question 1
-x = linspace(-5, 5, 1000);
+x = linspace(-2*pi, 2*pi, 1000);
 cos_true = cos(x);
 orders = 2:2:20;
 num_orders = length(orders);
@@ -30,9 +30,10 @@ xlabel('x axis');
 ylabel('y axis');
 title('Cosine Function and Taylor Approximations');
 legend(['cos(x)', arrayfun(@(n) sprintf('%dth Order', n), orders, 'UniformOutput', false)], 'Location', 'Best');
-xlim([-5, 5]);
+xlim([-2*pi, 2*pi]);
 ylim([-5, 5]);
-xticks(-5:1:5);
+xticks(-2*pi:pi:2*pi);
+xticklabels({'-2\pi', '-\pi', '0', '\pi', '2\pi'});
 yticks(-5:1:5);
 grid on;
 
@@ -43,12 +44,12 @@ plot(x, cos_true, 'LineWidth', 2);
 xlabel('x axis');
 ylabel('y axis');
 title('Original cos(x)');
-xlim([-5, 5]);
+xlim([-2*pi, 2*pi]);
 ylim([-5, 5]);
-xticks(-5:1:5);
+xticks(-2*pi:pi:2*pi);
+xticklabels({'-2\pi', '-\pi', '0', '\pi', '2\pi'});
 yticks(-5:1:5);
 grid on;
-
 subplot(1,2,2);
 hold on;
 for k = 1:num_orders
@@ -59,18 +60,18 @@ xlabel('x axis');
 ylabel('y axis');
 title('Taylor Approximations');
 legend(arrayfun(@(n) sprintf('%dth Order', n), orders, 'UniformOutput', false), 'Location', 'Best');
-xlim([-5, 5]);
+xlim([-2*pi, 2*pi]);
 ylim([-5, 5]);
-xticks(-5:1:5);
+xticks(-2*pi:pi:2*pi);
+xticklabels({'-2\pi', '-\pi', '0', '\pi', '2\pi'});
 yticks(-5:1:5);
 grid on;
 
 % Question 3
-[X, Y] = meshgrid(linspace(-5, 5, 100), linspace(-5, 5, 100));
+[X, Y] = meshgrid(linspace(-2*pi, 2*pi, 100), linspace(-2*pi, 2*pi, 100));
 R = sqrt(X.^2 + Y.^2);
 Z = sin(pi * R) ./ (pi * R);
 Z(R == 0) = 1;
-
 figure;
 surf(X, Y, Z);
 shading interp;
@@ -78,8 +79,12 @@ xlabel('x axis');
 ylabel('y axis');
 zlabel('z axis');
 title('Surface Plot of sinc Function');
-xlim([-5, 5]);
-ylim([-5, 5]);
+xlim([-2*pi, 2*pi]);
+ylim([-2*pi, 2*pi]);
+xticks(-2*pi:pi:2*pi);
+xticklabels({'-2\pi', '-\pi', '0', '\pi', '2\pi'});
+yticks(-2*pi:pi:2*pi);
+yticklabels({'-2\pi', '-\pi', '0', '\pi', '2\pi'});
 colorbar;
 grid on;
 
