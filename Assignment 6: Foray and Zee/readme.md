@@ -21,7 +21,7 @@ x = zeros(1, N);
 for i = 1:length(freqs)
     x = x + dB2mag(dbValues(i)) * exp(1j*2*pi*freqs(i)*t);
 end
-x = x + dB2mag(-10) * randn(1, N);
+x = x + dB2mag(-10)*randn(1, N);
 
 figure
 subplot(2,1,1)
@@ -42,6 +42,7 @@ ylabel('Magnitude')
 title('DFT Magnitude')
 
 % Question 3:
+
 z_zeros = [
     0.55 + 1j*0.08
     0.55 - 1j*0.08
@@ -87,17 +88,20 @@ for i = 1:Nfft
     H(i) = polyval(num, z^(-1)) / polyval(den, z^(-1));
 end
 
+freqHz = (w/(2*pi)) * Fs;
+freqkHz = freqHz / 1000;
+
 figure
 subplot(2,1,1)
-plot(w, 20*log10(abs(H)), 'LineWidth', 1)
+plot(freqkHz, 20*log10(abs(H)), 'LineWidth', 1)
 grid on
-xlabel('Frequency (rad/sample)')
+xlabel('Frequency (kHz)')
 ylabel('Magnitude (dB)')
 title('Magnitude Response')
 
 subplot(2,1,2)
-plot(w, angle(H), 'LineWidth', 1)
+plot(freqkHz, (angle(H)*180/pi), 'LineWidth', 1)
 grid on
-xlabel('Frequency (rad/sample)')
-ylabel('Phase (radians)')
+xlabel('Frequency (kHz)')
+ylabel('Phase (degrees)')
 title('Phase Response')
