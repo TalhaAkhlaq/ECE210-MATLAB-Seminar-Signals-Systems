@@ -32,36 +32,31 @@ ylabel('Amplitude')
 title('Real Component of Signal')
 
 X = fft(x);
-fAxis = (0:N-1)*(Fs/N);
+X_shifted = fftshift(X);  
+fAxis = linspace(-Fs/2, Fs/2, N);
 subplot(2,1,2)
-plot(fAxis, abs(X), 'LineWidth', 1)
+plot(fAxis, abs(X_shifted), 'LineWidth', 1)
 grid on
-xlim([0 Fs/2])
 xlabel('Frequency (Hz)')
 ylabel('Magnitude')
-title('DFT Magnitude')
+title('DFT Magnitude (Double-Sided)')
 
 % Question 3:
-
-z_zeros = [
-    0.55 + 1j*0.08
-    0.55 - 1j*0.08
-    0.39 + 1j*0.96
-    0.39 - 1j*0.96
-    0.07 + 1j*0.68
-    0.07 - 1j*0.68
-    0.08
-];
-z_poles = [
-   -0.06 + 1j*0.83
-   -0.06 - 1j*0.83
-    0.30 + 1j*0.69
-    0.30 - 1j*0.69
-    0.77 + 1j*0.61
-    0.77 - 1j*0.61
-   -0.68
-   -0.34
-];
+z_zeros = [0.55+1j*0.08;
+           0.55-1j*0.08;
+           0.39+1j*0.96;
+           0.39-1j*0.96;
+           0.07+1j*0.68;
+           0.07-1j*0.68;
+           0.08];
+z_poles = [-0.06+1j*0.83;
+           -0.06-1j*0.83;
+            0.30+1j*0.69;
+            0.30-1j*0.69;
+            0.77+1j*0.61;
+            0.77-1j*0.61;
+           -0.68;
+           -0.34];
 
 k = -0.43;
 num = k * poly(z_zeros);
@@ -85,7 +80,7 @@ w = linspace(0, 2*pi, Nfft);
 H = zeros(1, Nfft);
 for i = 1:Nfft
     z = exp(1j*w(i));
-    H(i) = polyval(num, z^(-1)) / polyval(den, z^(-1));
+    H(i) = polyval(num, z) / polyval(den, z);
 end
 
 freqHz = (w/(2*pi)) * Fs;
@@ -100,7 +95,7 @@ ylabel('Magnitude (dB)')
 title('Magnitude Response')
 
 subplot(2,1,2)
-plot(freqkHz, (angle(H)*180/pi), 'LineWidth', 1)
+plot(freqkHz, angle(H)*(180/pi), 'LineWidth', 1)
 grid on
 xlabel('Frequency (kHz)')
 ylabel('Phase (degrees)')
