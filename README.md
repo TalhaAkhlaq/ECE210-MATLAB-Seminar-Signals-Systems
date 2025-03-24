@@ -28,7 +28,6 @@ The course addresses:
 - **[Assignment 4: Getting Funcy](https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/tree/main/Assignment%204%3A%20Getting%20Funcy)**
 - **[Assignment 5: Plotting](https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/tree/main/Assignment%205%3A%20Plotting)**
 - **[Assignment 6: Foray and Zee](https://github.com/TalhaAkhlaq/ECE210-MATLAB-Seminar-Signals-Systems/tree/main/Assignment%206%3A%20Foray%20and%20Zee)**
-- 
 
 ## Copyright & Licensing
 
