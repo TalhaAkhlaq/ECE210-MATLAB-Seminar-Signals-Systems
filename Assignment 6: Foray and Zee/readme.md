@@ -32,7 +32,7 @@ ylabel('Amplitude')
 title('Real Component of Signal')
 
 X = fft(x);
-X_shifted = fftshift(X);  
+X_shifted = fftshift(X);
 fAxis = linspace(-Fs/2, Fs/2, N);
 subplot(2,1,2)
 plot(fAxis, abs(X_shifted), 'LineWidth', 1)
@@ -94,9 +94,13 @@ xlabel('Frequency (kHz)')
 ylabel('Magnitude (dB)')
 title('Magnitude Response')
 
+phase_unwrapped = unwrap(angle(H));
+phase_degrees = phase_unwrapped * (180/pi);
+
 subplot(2,1,2)
-plot(freqkHz, angle(H)*(180/pi), 'LineWidth', 1)
+plot(freqkHz, phase_degrees, 'LineWidth', 1)
 grid on
 xlabel('Frequency (kHz)')
 ylabel('Phase (degrees)')
 title('Phase Response')
+
